@@ -1,0 +1,141 @@
+'''
+cliente= {'Nombre': 'Alejo', 'DNI': '41665517'}
+cliente['Apellido']= 'Di Lelle'
+print(cliente)
+
+
+#Ejercicio1
+usuario = {'nombre': 'mark', 'apellido': 'ronnan', 'DNI': '89278823', 'rol':'asistente', 'sucursal':'005'}
+print(usuario['nombre'].title())
+print(usuario['apellido'].title())
+print(usuario['DNI'])
+print(usuario['rol'].title())
+print(usuario['sucursal'])
+
+#Ejercicio2
+animals_list= ['leon', 'tigre', 'caballo', 'perro']
+animals_tuple = ('leon','murcielago')
+animals_set = {'perro', 'gato', 'mamut'}
+animals_dict = {'animal': 'leon', 'tipo':'felino'}
+
+print(animals_list, type(animals_list))
+print(animals_tuple, type(animals_tuple))
+print(animals_set, type(animals_set))
+print(animals_dict, type(animals_dict))
+
+animals_list.append('alejo')
+animals_set.add('rinoceronte')
+animals_dict['habitat'] = 'selva'
+
+
+print('-----------\n')
+print(animals_list)
+print(animals_tuple)
+print(animals_set)
+print(animals_dict)
+
+
+#Ejercicio3
+usuario = {'nombre': 'mark', 'apellido': 'ronnan', 'dni': '89278823', 'rol':'asistente', 'sucursal':'005'}
+
+for i in usuario:
+    if i == 'dni':
+        print(i.upper(),usuario[i].title())
+    else:
+        print(i.title(), usuario[i].title())
+
+print(usuario.keys())
+print(usuario.values())
+print(usuario.items())
+
+
+#Ejercicio4
+poll= {'anonimo1': '6', 'anonimo2': '9', 'anonimo3': '5', 'anonimo4':
+'x', 'anonimo5': 'x', 'anonimo6': '8', 'anonimo7': '3',
+'anonimo8': '10', 'anonimo9': '4', 'anonimo10': '5', 'anonimo11':
+'x', 'anonimo12': '2', 'anonimo13': '7', 'anonimo14': '5',
+'anonimo15': '2', 'anonimo16': '8', 'anonimo17': '10'}
+poll_dict={}
+poll_list=[]
+no_answer= 0
+answer= 0
+
+for key, value in poll.items():
+    if value == 'x':
+        no_answer += 1
+    else:
+        poll_list.append(value)
+        poll_dict[key] = value
+
+print(f'\nEmpleados que no contestaron: {no_answer}')
+print(f'\n{poll_list}')
+print(f'\n{poll_dict}')
+
+print(len(poll_list))
+
+#for key, value in poll_dict:
+ #   answer
+
+
+#Ejercicio 5
+eeuu={"country":"Estados Unidos",
+      "cities":["Miami","Las Vegas"],
+      "currency":"USD",
+      "language":"Inglés"}
+
+fr={"country":"Francia",
+    "cities":["Paris","Toulouse"],
+    "currency":"EUR",
+    "language":"Francés"}
+
+esp= {"country":"España",
+      "cities":["Madrid","Barcelona"],
+      "currency":"EUR",
+      "language":"Español"}
+
+countries=[eeuu,fr,esp]
+ciudades=[]
+
+for country in countries:
+    if country["country"] == "Suecia":
+        print("Suecia está en la lista")
+    else:
+        print("Suecia NO está en la lista")
+
+    if "Madrid" in country["cities"]:
+        print("Madrid está en la lista")
+    else:
+        print("Madrid NO está en la lista")
+
+    print(country.get(country["country"] == "Australia", "Australia NO está en la lista"))
+
+    ciudades.append(country["cities"])
+
+    print("-----")
+
+countries.remove(eeuu)
+
+print(ciudades)
+print(countries)
+'''
+
+#Ejercicio 7
+
+
+numbers= []
+for i in range(101):
+    if i == 0:
+        continue
+    else:
+        diccionario = {}
+        diccionario["number"]=i
+
+        if i %2 == 0:
+            diccionario["type"] = "PAR"
+        else:
+            diccionario["type"] = "IMPAR"
+    
+        numbers.append(diccionario)
+
+
+print(numbers)
