@@ -1,0 +1,14 @@
+persona = {
+   "nombre":"Mike",
+   "apellido":"Matheu",
+   "sexo":"Male",
+   "direccion":"Av. Mugga",
+   "estado":"Canberra",
+   "pais":"Australia",
+   "gustos_musicales":[
+      "Aerosmith",
+      "Metallica",
+      "Dream Theater",
+      "Deep Purple"
+   ]
+}

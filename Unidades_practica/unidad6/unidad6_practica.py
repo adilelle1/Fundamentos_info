@@ -71,10 +71,13 @@ elif option == "3":
     print(f'\nImprimiento...{prisma.nombre} por favor espere')
     print(f'\n{prisma.print_properties()}')
 
-
 # Ejercicio 3
 
-class Lamparas:
+
+from datetime import date
+
+
+class Lamps:
 
     def __init__(self, fabricante, codigo_fabricante, modelo, amperaje, potencia, diametro, eficiencia_energetica,
                  precio):
@@ -87,10 +90,47 @@ class Lamparas:
         self.eficiencia_energetica = eficiencia_energetica
         self.precio = precio
 
+    def ajuste_inflacion(self):
+        ajuste = 1 + (int(input("Ingrese el porcentaje que desea ajustar>>"))/100)
+        nuevo_precio = self.precio * ajuste
+        print(f'El nuevo precio es: {nuevo_precio}')
 
-npn = Lamparas('Pfizer', '001123', 'deluxe', 220, '4MA', 5, '12w/s', 250)
+
+
+class NPN731(Lamps):
+
+    def __init__(self, fabricante, codigo_fabricante, modelo, amperaje, potencia, diametro, eficiencia_energetica,
+                 precio):
+        super().__init__(fabricante, codigo_fabricante, modelo, amperaje, potencia, diametro, eficiencia_energetica,
+                         precio)
+
+        self.certificado = "ISO 9023"
+
+    def print_certificate(self):
+        return f'\nCertificado: {self.certificado}'
+
+    def print_product(self):
+        return f'\nModelo: {self.modelo} ' \
+               f'\nDiametro: {self.diametro}'
+
+    def print_price(self):
+        return f'\nPrecio: {self.precio}'
+
+    def print_details(self):
+        return f'\nAmperaje: {self.amperaje}' \
+               f'\nPotencia: {self.potencia} ' \
+               f'\nEficiencia energetica: {self.eficiencia_energetica}'
+
+    def __str__(self) -> str:
+        return super().__str__()
+
+
+lamp1 = NPN731('HP', 10332, "prime", 500, 120, 12, "alta", 100)
+
+print(lamp1.ajuste_inflacion())
 
 '''
 
-# Ejercicio 4
+
+
 

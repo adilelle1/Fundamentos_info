@@ -17,7 +17,4 @@ lebron_james = Player("LeBron", "James", 37, "United States", 207, 105, lakers.n
 demar_derozan = Player("Demar", "DeRozan", 32, "United States", 200, 95, bulls.name, bulls.games, bulls.wins, bulls.loses,
                       900, 700, 500)
 
-
-
-print(lebron_james)
-
+print(demar_derozan)
